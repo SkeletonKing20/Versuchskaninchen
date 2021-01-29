@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 62a74801e216a5b4396026fdd5111789
+guid: 00fecef331ec28e418f237419280c89f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 664265332215761522
-    second: horizontalWalk1
+      213: 8466848728427864954
+    second: PushWalk1
   - first:
-      213: 7156870722967164171
-    second: horizontalWalk2
+      213: -7990602464474920449
+    second: PushWalk2
   - first:
-      213: -6570303600597065281
-    second: Idle
+      213: -1401655880272582190
+    second: PushDown1
   - first:
-      213: -5378941650565537859
-    second: PushIdle
+      213: 3893087003373370439
+    second: PushDown2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,13 +101,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: horizontalWalk1
+      name: PushWalk1
       rect:
         serializedVersion: 2
-        x: 47
-        y: 71
-        width: 205
-        height: 392
+        x: 36
+        y: 64
+        width: 201
+        height: 404
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,40 +115,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27ac35bdcc1f73900800000000000000
-      internalID: 664265332215761522
+      spriteID: a7329e82f0a408570800000000000000
+      internalID: 8466848728427864954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: horizontalWalk2
+      name: PushWalk2
       rect:
         serializedVersion: 2
-        x: 282
-        y: 73
-        width: 187
-        height: 389
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b05d9d9f000525360800000000000000
-      internalID: 7156870722967164171
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle
-      rect:
-        serializedVersion: 2
-        x: 535
-        y: 60
-        width: 189
+        x: 288
+        y: 64
+        width: 199
         height: 400
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -157,20 +136,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb121fbafa791d4a0800000000000000
-      internalID: -6570303600597065281
+      spriteID: ff98c93056dab1190800000000000000
+      internalID: -7990602464474920449
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PushIdle
+      name: PushDown1
       rect:
         serializedVersion: 2
-        x: 784
-        y: 59
-        width: 195
-        height: 401
+        x: 529
+        y: 67
+        width: 185
+        height: 397
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,8 +157,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbfdc7251192a55b0800000000000000
-      internalID: -5378941650565537859
+      spriteID: 2d9e30737615c8ce0800000000000000
+      internalID: -1401655880272582190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PushDown2
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 67
+        width: 186
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74c72cbc006070630800000000000000
+      internalID: 3893087003373370439
       vertices: []
       indices: 
       edges: []

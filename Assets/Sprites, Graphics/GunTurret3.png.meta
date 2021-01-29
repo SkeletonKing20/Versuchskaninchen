@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 62a74801e216a5b4396026fdd5111789
+guid: 30c20704d7e540d43a371ad98cfa8397
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 664265332215761522
-    second: horizontalWalk1
+      213: -2545315182566387508
+    second: GunTurretHeadOpen
   - first:
-      213: 7156870722967164171
-    second: horizontalWalk2
+      213: -7018661331518919392
+    second: GunTurretHeadClosed
   - first:
-      213: -6570303600597065281
-    second: Idle
+      213: -5063167746917435358
+    second: GunTurretBase
   - first:
-      213: -5378941650565537859
-    second: PushIdle
+      213: 6279309495158303462
+    second: GunTurret3_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,76 +101,55 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: horizontalWalk1
+      name: GunTurretHeadOpen
       rect:
         serializedVersion: 2
-        x: 47
-        y: 71
-        width: 205
-        height: 392
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 27ac35bdcc1f73900800000000000000
-      internalID: 664265332215761522
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: horizontalWalk2
-      rect:
-        serializedVersion: 2
-        x: 282
-        y: 73
-        width: 187
-        height: 389
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b05d9d9f000525360800000000000000
-      internalID: 7156870722967164171
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle
-      rect:
-        serializedVersion: 2
-        x: 535
-        y: 60
-        width: 189
-        height: 400
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fb121fbafa791d4a0800000000000000
-      internalID: -6570303600597065281
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PushIdle
-      rect:
-        serializedVersion: 2
-        x: 784
-        y: 59
+        x: 516
+        y: 667
         width: 195
-        height: 401
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.21}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc0d8bdb3593dacd0800000000000000
+      internalID: -2545315182566387508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunTurretHeadClosed
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 666
+        width: 198
+        height: 356
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02d6b0894b4b89e90800000000000000
+      internalID: -7018661331518919392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunTurretBase
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 393
+        width: 415
+        height: 270
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,8 +157,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbfdc7251192a55b0800000000000000
-      internalID: -5378941650565537859
+      spriteID: 22875ce82c30cb9b0800000000000000
+      internalID: -5063167746917435358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunTurret3_3
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 389
+        width: 447
+        height: 272
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eae5a577b6942750800000000000000
+      internalID: 6279309495158303462
       vertices: []
       indices: 
       edges: []

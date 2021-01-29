@@ -69,6 +69,7 @@ GameObject:
   - component: {fileID: 6863685117079564048}
   - component: {fileID: 1976014249721851049}
   - component: {fileID: 1447985701785192796}
+  - component: {fileID: 5148816058736224633}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -176,6 +177,18 @@ CompositeCollider2D:
       - {x: -0.5988561, y: 0.0172853}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!114 &5148816058736224633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6863685117079564050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edc2ee8f9e9ae6341956ec9b702555eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6863685118196343311
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +342,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.5475, y: 4.7}
+  m_Size: {x: 1.89, y: 4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
