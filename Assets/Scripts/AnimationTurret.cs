@@ -5,6 +5,7 @@ using UnityEngine;
 public class AnimationTurret : MonoBehaviour
 {
     Animator animator;
+    Turret turret;
     int paramIDShot;
     void Awake()
     {
@@ -17,7 +18,7 @@ public class AnimationTurret : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(shotsFired())
+        if(turret.shotsFired())
         {
             animator.SetTrigger(paramIDShot);
         }
