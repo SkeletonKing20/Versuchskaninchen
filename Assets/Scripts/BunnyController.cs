@@ -14,6 +14,6 @@ public class BunnyController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb2d.velocity = Vector2.right * movementSpeed * Time.deltaTime * Input.GetAxisRaw("Horizontal");
+        rb2d.velocity = Vector2.right * movementSpeed * Time.deltaTime * Input.GetAxisRaw("Horizontal") + Vector2.up * movementSpeed * Time.deltaTime * Input.GetAxisRaw("Vertical");
     }
 }

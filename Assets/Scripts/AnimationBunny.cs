@@ -22,7 +22,7 @@ public class AnimationBunny : MonoBehaviour
     {
         animator.SetFloat(paramIDHorizontal, Input.GetAxisRaw("Horizontal"));
         animator.SetFloat(paramIDVertical, Input.GetAxisRaw("Vertical"));
-        if(Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
             animator.SetBool(paramIDPush, true);
         }

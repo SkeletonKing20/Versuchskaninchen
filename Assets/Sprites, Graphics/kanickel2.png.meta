@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 30c20704d7e540d43a371ad98cfa8397
+guid: 00fecef331ec28e418f237419280c89f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2545315182566387508
-    second: GunTurretHeadOpen
+      213: 8466848728427864954
+    second: PushWalk1
   - first:
-      213: -7018661331518919392
-    second: GunTurretHeadClosed
+      213: -7990602464474920449
+    second: PushWalk2
   - first:
-      213: -5063167746917435358
-    second: GunTurretBase
+      213: -1401655880272582190
+    second: PushDown1
   - first:
-      213: 6279309495158303462
-    second: GunTurret3_3
+      213: 3893087003373370439
+    second: PushDown2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,55 +101,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GunTurretHeadOpen
+      name: PushWalk1
       rect:
         serializedVersion: 2
-        x: 516
-        y: 667
-        width: 195
-        height: 360
-      alignment: 9
-      pivot: {x: 0.5, y: 0.21}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cc0d8bdb3593dacd0800000000000000
-      internalID: -2545315182566387508
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GunTurretHeadClosed
-      rect:
-        serializedVersion: 2
-        x: 1010
-        y: 666
-        width: 198
-        height: 356
-      alignment: 9
-      pivot: {x: 0.5, y: 0.25}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 02d6b0894b4b89e90800000000000000
-      internalID: -7018661331518919392
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GunTurretBase
-      rect:
-        serializedVersion: 2
-        x: 401
-        y: 393
-        width: 415
-        height: 270
+        x: 36
+        y: 64
+        width: 201
+        height: 404
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,20 +115,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22875ce82c30cb9b0800000000000000
-      internalID: -5063167746917435358
+      spriteID: a7329e82f0a408570800000000000000
+      internalID: 8466848728427864954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GunTurret3_3
+      name: PushWalk2
       rect:
         serializedVersion: 2
-        x: 875
-        y: 389
-        width: 447
-        height: 272
+        x: 288
+        y: 64
+        width: 199
+        height: 400
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,8 +136,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6eae5a577b6942750800000000000000
-      internalID: 6279309495158303462
+      spriteID: ff98c93056dab1190800000000000000
+      internalID: -7990602464474920449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PushDown1
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 67
+        width: 185
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d9e30737615c8ce0800000000000000
+      internalID: -1401655880272582190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PushDown2
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 67
+        width: 186
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74c72cbc006070630800000000000000
+      internalID: 3893087003373370439
       vertices: []
       indices: 
       edges: []
