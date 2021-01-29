@@ -5,7 +5,7 @@ using UnityEngine;
 public class BunnyController : MonoBehaviour
 {
     Rigidbody2D rb2d;
-    private float movementSpeed = 10f;
+    private float movementSpeed = 100f;
     void Awake()
     {
         rb2d = GetComponentInChildren<Rigidbody2D>();
@@ -15,5 +15,10 @@ public class BunnyController : MonoBehaviour
     void FixedUpdate()
     {
         rb2d.velocity = Vector2.right * movementSpeed * Time.deltaTime * Input.GetAxisRaw("Horizontal") + Vector2.up * movementSpeed * Time.deltaTime * Input.GetAxisRaw("Vertical");
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("FuckYes!");
     }
 }

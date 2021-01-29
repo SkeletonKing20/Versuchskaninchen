@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    Rigidbody2D rb2d;
+    float movementSpeed = 10000f;
+    private void Awake()
     {
-        
+        rb2d = GetComponentInChildren<Rigidbody2D>();
     }
 
-    // Update is called once per frame
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
+
     void Update()
     {
-        
+        rb2d.velocity = transform.up * movementSpeed * Time.deltaTime;
     }
 }

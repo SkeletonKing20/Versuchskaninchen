@@ -18,7 +18,7 @@ public class AnimationTurret : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(turret.shotsFired())
+        if(true)
         {
             animator.SetTrigger(paramIDShot);
         }

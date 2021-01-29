@@ -4,15 +4,31 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
-    Bullet bullet;
+    public Bullet bullet;
+    int coolDown;
+    public TurretHead turretHead;
+    private void Awake()
+    {
+        
+    }
     public void shoot()
     {
-        Instantiate(bullet, this.transform.position, Quaternion.identity);
+        if(Time.time > coolDown)
+        {
+            coolDown += 2;
+            Instantiate(bullet, turretHead.transform.position, turretHead.getRotation());
+        }
     }
 
     // Update is called once per frame
     public bool shotsFired()
     {
         return true;
+    }
+
+    private void Update()
+    {
+        turretHead.setRotation(Input.GetAxisRaw("Horizontal"));
+        shoot();
     }
 }
