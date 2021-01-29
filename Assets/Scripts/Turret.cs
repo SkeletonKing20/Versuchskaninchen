@@ -28,7 +28,6 @@ public class Turret : MonoBehaviour
 
     private void Update()
     {
-        turretHead.setRotation(Input.GetAxisRaw("Horizontal"));
         shoot();
     }
 }

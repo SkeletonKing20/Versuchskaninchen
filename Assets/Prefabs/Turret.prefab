@@ -120,6 +120,67 @@ CompositeCollider2D:
       - {x: -0.4635267, y: -0.3083467}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!1 &1961563640989721613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8054689625290323943}
+  - component: {fileID: 2760406752472764494}
+  m_Layer: 8
+  m_Name: Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8054689625290323943
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961563640989721613}
+  m_LocalRotation: {x: -0, y: -0, z: 0.01855754, w: 0.9998278}
+  m_LocalPosition: {x: -0.09, y: 2.78, z: 0}
+  m_LocalScale: {x: 1, y: 2.6384647, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2669625029690843053}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.127}
+--- !u!60 &2760406752472764494
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961563640989721613}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 1
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.17678884, y: 3.1915298}
+      - {x: -4.6319184, y: 3.1808908}
+      - {x: -0.5877852, y: -0.80901706}
+      - {x: 0.58778536, y: -0.80901694}
+      - {x: 4.5619707, y: 3.2096791}
 --- !u!1 &2790512271961444688
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,6 +331,8 @@ GameObject:
   - component: {fileID: 2669625029690843053}
   - component: {fileID: 7706041693097160284}
   - component: {fileID: 8494106726126533245}
+  - component: {fileID: 1744292013866387487}
+  - component: {fileID: 5978457965092403437}
   m_Layer: 8
   m_Name: GunTurretHeadOpen
   m_TagString: Untagged
@@ -284,13 +347,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5137186294960809643}
-  m_LocalRotation: {x: -0, y: -0, z: -0.010116012, w: 0.99994886}
+  m_LocalRotation: {x: -0, y: -0, z: -0.020624591, w: 0.99978733}
   m_LocalPosition: {x: 0, y: 0.10000038, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 8054689625290323943}
   m_Father: {fileID: 3993993326654005833}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.159}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -2.364}
 --- !u!212 &7706041693097160284
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -354,3 +418,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 716bf2e55b420c348ad629c177774cd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 6863685117079564051, guid: 521b1cda0c2bce948832c25fb1e2b411, type: 3}
+--- !u!50 &1744292013866387487
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5137186294960809643}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!66 &5978457965092403437
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5137186294960809643}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 2760406752472764494}
+    m_ColliderPaths:
+    - - X: -1447873
+        Y: 27970944
+      - X: -12575421
+        Y: 27487504
+      - X: -1495423
+        Y: 1562737
+      - X: 1441479
+        Y: 1671798
+      - X: 10386423
+        Y: 28530200
+  m_CompositePaths:
+    m_Paths:
+    - - {x: -0.14954971, y: 0.1562911}
+      - {x: 0.14415391, y: 0.16719781}
+      - {x: 1.0385958, y: 2.8530178}
+      - {x: -0.1448195, y: 2.7970932}
+      - {x: -1.257524, y: 2.748708}
+  m_VertexDistance: 0.0005
+  m_OffsetDistance: 0.00005
