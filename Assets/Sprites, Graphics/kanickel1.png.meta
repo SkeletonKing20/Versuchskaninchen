@@ -4,16 +4,16 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 664265332215761522
-    second: kanickel1_0
+    second: horizontalWalk1
   - first:
       213: 7156870722967164171
-    second: kanickel1_1
+    second: horizontalWalk2
   - first:
       213: -6570303600597065281
-    second: kanickel1_2
+    second: Idle
   - first:
       213: -5378941650565537859
-    second: kanickel1_3
+    second: PushIdle
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,7 +101,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: kanickel1_0
+      name: horizontalWalk1
       rect:
         serializedVersion: 2
         x: 0
@@ -122,7 +122,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kanickel1_1
+      name: horizontalWalk2
       rect:
         serializedVersion: 2
         x: 254
@@ -143,7 +143,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kanickel1_2
+      name: Idle
       rect:
         serializedVersion: 2
         x: 508
@@ -164,7 +164,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kanickel1_3
+      name: PushIdle
       rect:
         serializedVersion: 2
         x: 762
