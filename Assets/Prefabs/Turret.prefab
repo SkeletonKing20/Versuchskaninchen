@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 88917949083596005, guid: 835aa8e9ef47c394faf3891027d4d72c, type: 3}
   turretHead: {fileID: 8494106726126533245}
-  target: {fileID: 6863685117079564051, guid: 521b1cda0c2bce948832c25fb1e2b411, type: 3}
+  target: {fileID: 5148816058736224633, guid: 521b1cda0c2bce948832c25fb1e2b411, type: 3}
 --- !u!50 &3069001147528963086
 Rigidbody2D:
   serializedVersion: 4
