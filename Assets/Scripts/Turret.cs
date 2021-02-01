@@ -7,6 +7,7 @@ public class Turret : MonoBehaviour
     public Bullet bullet;
     int coolDown;
     public TurretHead turretHead;
+    public BunnyController target;
     private void Awake()
     {
         
@@ -29,5 +30,10 @@ public class Turret : MonoBehaviour
     private void Update()
     {
         shoot();
+    }
+
+    public void headRotation()
+    {
+        turretHead.turnTowardsPlayer(target);
     }
 }

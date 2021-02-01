@@ -6,33 +6,31 @@ public class TurretHead : MonoBehaviour
 {
     private Quaternion rotation;
     float speed;
-    public Transform target;
+    public BunnyController target;
+    private void Update()
+    {
+       
+    }
     private void Awake()
     {
-    }
 
+    }
     public Quaternion getRotation()
     {
         rotation = this.transform.rotation;
         return rotation;
     }
 
-    public void setRotation(float input)
+    public void turnTowardsPlayer(BunnyController target)
     {
-        transform.Rotate(0, 0, input, Space.Self);
+        Vector3 diff = transform.position - target.transform.position;
+
+        diff.Normalize();
+
+        float rot_Z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
+
+        transform.rotation = Quaternion.Euler(0f, 0f, rot_Z);
     }
 
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        Debug.Log("yep");
-        var step = speed * Time.deltaTime;
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, target.rotation, step);
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        Debug.Log("yep");
-        var step = speed * Time.deltaTime;
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, target.rotation, step);
-    }
+    
 }
