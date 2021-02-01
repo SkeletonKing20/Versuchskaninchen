@@ -5,19 +5,19 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     Rigidbody2D rb2d;
-    float movementSpeed = 10000f;
+    float movementSpeed = 1000f;
     private void Awake()
     {
         rb2d = GetComponentInChildren<Rigidbody2D>();
     }
 
-    private void OnBecameInvisible()
-    {
-        Destroy(gameObject);
-    }
-
-    void Update()
+    void FixedUpdate()
     {
         rb2d.velocity = transform.up * movementSpeed * Time.deltaTime;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(gameObject);
     }
 }

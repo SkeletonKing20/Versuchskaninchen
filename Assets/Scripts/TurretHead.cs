@@ -5,19 +5,14 @@ using UnityEngine;
 public class TurretHead : MonoBehaviour
 {
     private Quaternion rotation;
-    float speed;
     public BunnyController target;
     private void Update()
     {
-       
     }
-    private void Awake()
-    {
 
-    }
     public Quaternion getRotation()
     {
-        rotation = this.transform.rotation;
+        rotation = transform.rotation;
         return rotation;
     }
 
