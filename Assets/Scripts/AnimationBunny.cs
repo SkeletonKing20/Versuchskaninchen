@@ -5,7 +5,7 @@ using UnityEngine;
 public class AnimationBunny : MonoBehaviour
 {
     Animator animator;
-    private int paramIDHorizontal, paramIDVertical, paramIDPush;
+    private int paramIDHorizontal, paramIDVertical, paramIDPush, paramIDDied;
     void Awake()
     {
         animator = GetComponentInChildren<Animator>();
@@ -15,6 +15,7 @@ public class AnimationBunny : MonoBehaviour
         paramIDHorizontal = Animator.StringToHash("horizontalMovement");
         paramIDVertical = Animator.StringToHash("verticalMovement");
         paramIDPush = Animator.StringToHash("isMovingAnObject");
+        paramIDDied = Animator.StringToHash("Died");
     }
 
     // Update is called once per frame
@@ -29,6 +30,14 @@ public class AnimationBunny : MonoBehaviour
         if (Input.GetButtonUp("Jump"))
         {
             animator.SetBool(paramIDPush, false);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Bullet"))
+        {
+            animator.SetTrigger(paramIDDied);
         }
     }
 }
