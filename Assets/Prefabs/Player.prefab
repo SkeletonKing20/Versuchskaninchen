@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1976014249721851049}
   - component: {fileID: 5148816058736224633}
   - component: {fileID: 7102319396956858730}
+  - component: {fileID: 3750112475730016416}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -96,6 +97,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  death: {fileID: 2387137651082598247, guid: b45e6cb8e237ec44d9a6e2aa82f6fb8c, type: 3}
 --- !u!66 &7102319396956858730
 CompositeCollider2D:
   m_ObjectHideFlags: 0
@@ -118,6 +120,22 @@ CompositeCollider2D:
     m_Paths: []
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!114 &3750112475730016416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6863685117079564050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad23706ffb096a40b5bf51ef83da3d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 1
+  boxMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &6863685118433634671
 GameObject:
   m_ObjectHideFlags: 0

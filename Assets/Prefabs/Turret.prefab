@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 4281412439709037050}
   - component: {fileID: 3069001147528963086}
   - component: {fileID: 5429273447748573511}
+  - component: {fileID: 920297505400025897}
+  - component: {fileID: 1831648301892280322}
   m_Layer: 8
   m_Name: Turret
   m_TagString: Turret
@@ -97,6 +99,42 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.7188652, y: 2.3954716}
   m_EdgeRadius: 0
+--- !u!255 &920297505400025897
+FixedJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920863169998192863}
+  m_Enabled: 0
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0.53, y: -2.63}
+  m_DampingRatio: 0
+  m_Frequency: 0
+--- !u!114 &1831648301892280322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920863169998192863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8138b1a8a98231048860a37d1ca94e9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMass: 0
+  imovableMass: 10000
+  beingPushed: 0
+  lastPos: {x: 0, y: 0, z: 0}
+  mode: 0
+  colliding: 0
 --- !u!1 &1961563640989721613
 GameObject:
   m_ObjectHideFlags: 0
@@ -399,3 +437,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 5148816058736224633, guid: 521b1cda0c2bce948832c25fb1e2b411, type: 3}
+  offset: 0

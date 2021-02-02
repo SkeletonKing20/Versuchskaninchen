@@ -1,7 +1,43 @@
 fileFormatVersion: 2
 guid: 855f03da1430f054292369bda698f497
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -5693031416346039869
+    second: roomsawallshallways_0
+  - first:
+      213: -8255951877610408876
+    second: roomsawallshallways_1
+  - first:
+      213: -5850800585690929301
+    second: roomsawallshallways_2
+  - first:
+      213: 6324694267821988115
+    second: roomsawallshallways_3
+  - first:
+      213: 1514425074074583545
+    second: roomsawallshallways_4
+  - first:
+      213: -7689946517300613778
+    second: roomsawallshallways_5
+  - first:
+      213: 8132668504725512017
+    second: roomsawallshallways_6
+  - first:
+      213: 3928808297921654193
+    second: roomsawallshallways_7
+  - first:
+      213: -2050027241585067496
+    second: roomsawallshallways_8
+  - first:
+      213: -8409442062398351710
+    second: roomsawallshallways_9
+  - first:
+      213: 2833435495872882328
+    second: roomsawallshallways_10
+  - first:
+      213: -5082692394155218717
+    second: roomsawallshallways_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +77,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +109,273 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: roomsawallshallways_0
+      rect:
+        serializedVersion: 2
+        x: 2697
+        y: 209
+        width: 94
+        height: 632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c92e8df61a4ef0b0800000000000000
+      internalID: -5693031416346039869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roomsawallshallways_1
+      rect:
+        serializedVersion: 2
+        x: 4373
+        y: 124
+        width: 627
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 454ff4c5287fc6d80800000000000000
+      internalID: -8255951877610408876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roomsawallshallways_2
+      rect:
+        serializedVersion: 2
+        x: 3006
+        y: 1694
+        width: 1021
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b67ae3ebdd7cdcea0800000000000000
+      internalID: -5850800585690929301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roomsawallshallways_3
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 985
+        width: 2662
+        height: 1872
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3199a7a4de3d5c750800000000000000
+      internalID: 6324694267821988115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roomsawallshallways_4
+      rect:
+        serializedVersion: 2
+        x: 2569
+        y: 211
+        width: 93
+        height: 523
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f10923c491540510800000000000000
+      internalID: 1514425074074583545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roomsawallshallways_5
+      rect:
+        serializedVersion: 2
+        x: 3050
+        y: 152
+        width: 950
+        height: 1413
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6d6b86b262d74590800000000000000
+      internalID: -7689946517300613778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roomsawallshallways_6
+      rect:
+        serializedVersion: 2
+        x: 2460
+        y: 210
+        width: 82
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15fdb249aea0dd070800000000000000
+      internalID: 8132668504725512017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roomsawallshallways_7
+      rect:
+        serializedVersion: 2
+        x: 2339
+        y: 214
+        width: 86
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bd2a3cc45ee58630800000000000000
+      internalID: 3928808297921654193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roomsawallshallways_8
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 214
+        width: 272
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81ab275d517dc83e0800000000000000
+      internalID: -2050027241585067496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roomsawallshallways_9
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 209
+        width: 388
+        height: 580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a69487dff8ab4b80800000000000000
+      internalID: -8409442062398351710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roomsawallshallways_10
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 323
+        width: 587
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8966c714292625720800000000000000
+      internalID: 2833435495872882328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roomsawallshallways_11
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 214
+        width: 530
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e86ccf5236a679b0800000000000000
+      internalID: -5082692394155218717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
