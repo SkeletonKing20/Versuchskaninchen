@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3069001147528963086}
   - component: {fileID: 5429273447748573511}
   - component: {fileID: 920297505400025897}
-  - component: {fileID: 1831648301892280322}
   m_Layer: 8
   m_Name: Turret
   m_TagString: Turret
@@ -51,7 +50,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 88917949083596005, guid: 835aa8e9ef47c394faf3891027d4d72c, type: 3}
   turretHead: {fileID: 8494106726126533245}
-  target: {fileID: 5148816058736224633, guid: 521b1cda0c2bce948832c25fb1e2b411, type: 3}
 --- !u!50 &3069001147528963086
 Rigidbody2D:
   serializedVersion: 4
@@ -117,85 +115,6 @@ FixedJoint2D:
   m_ConnectedAnchor: {x: 0.53, y: -2.63}
   m_DampingRatio: 0
   m_Frequency: 0
---- !u!114 &1831648301892280322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920863169998192863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8138b1a8a98231048860a37d1ca94e9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultMass: 0
-  imovableMass: 10000
-  beingPushed: 0
-  lastPos: {x: 0, y: 0, z: 0}
-  mode: 0
-  colliding: 0
---- !u!1 &1961563640989721613
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8054689625290323943}
-  - component: {fileID: 2760406752472764494}
-  m_Layer: 8
-  m_Name: Trigger
-  m_TagString: Turret
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8054689625290323943
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1961563640989721613}
-  m_LocalRotation: {x: -0, y: -0, z: -0.0020674467, w: 0.9999979}
-  m_LocalPosition: {x: 0.02472496, y: 2.8813467, z: 0}
-  m_LocalScale: {x: 1, y: 2.6384647, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4326144788734319713}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.127}
---- !u!60 &2760406752472764494
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1961563640989721613}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 1
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.17678884, y: 3.1915298}
-      - {x: -4.6319184, y: 3.1808908}
-      - {x: -0.5877852, y: -0.80901706}
-      - {x: 0.58778536, y: -0.80901694}
-      - {x: 4.5619707, y: 3.2096791}
 --- !u!1 &2790512271961444688
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,8 +125,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4326144788734319713}
   - component: {fileID: 6529083426742277914}
-  - component: {fileID: 6422604711871581694}
-  - component: {fileID: 8080743953049667227}
   m_Layer: 8
   m_Name: Base
   m_TagString: Turret
@@ -225,8 +142,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 8054689625290323943}
+  m_Children: []
   m_Father: {fileID: 3993993326654005833}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -269,7 +185,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -3995861177344162757, guid: f844cde916d5c2e498dd5d58e7e9ecbe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -281,66 +197,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &6422604711871581694
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2790512271961444688}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 7
---- !u!66 &8080743953049667227
-CompositeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2790512271961444688}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
-  m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 2760406752472764494}
-    m_ColliderPaths:
-    - - X: -293108
-        Y: 28256862
-      - X: -11431128
-        Y: 28232742
-      - X: -1429703
-        Y: 1873080
-      - X: 1509197
-        Y: 1860929
-      - X: 11554184
-        Y: 28327592
-  m_CompositePaths:
-    m_Paths:
-    - - {x: -1.1430666, y: 2.8232741}
-      - {x: -0.1429514, y: 0.187308}
-      - {x: 0.1509264, y: 0.1861106}
-      - {x: 1.1553718, y: 2.8327591}
-      - {x: -0.0293109, y: 2.8256862}
-  m_VertexDistance: 0.0005
-  m_OffsetDistance: 0.00005
 --- !u!1 &5137186294960809643
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,7 +268,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 5650920332587134549, guid: f844cde916d5c2e498dd5d58e7e9ecbe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -436,5 +292,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 716bf2e55b420c348ad629c177774cd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 5148816058736224633, guid: 521b1cda0c2bce948832c25fb1e2b411, type: 3}
   offset: 0

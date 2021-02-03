@@ -5,7 +5,6 @@ using UnityEngine;
 public class TurretHead : MonoBehaviour
 {
     private Quaternion rotation;
-    public GameObject target;
     public float offset;
     private void Update()
     {
