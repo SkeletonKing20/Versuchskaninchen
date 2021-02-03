@@ -6,46 +6,29 @@ using UnityEngine.Events;
 public class BunnyController : MonoBehaviour
 {
     Rigidbody2D rb2d;
-
     RaycastHit2D hit;
-
-    public LayerMask boxMask;
-
-    public UnityEvent turnEvent;
-
-    public GameObject death;
-    public GameObject box;
-
     public bool isHolding;
-    bool gameOver;
-
+    public UnityEvent turnEvent;
     private float movementSpeed = 100f;
+    bool gameOver;
+    public GameObject death;
+    Vector3 position;
+    public LayerMask boxMask;
     public float rayDistance;
-
-    int killCount;
-
+    public GameObject box;
     Vector3 faceDirection;
-
+    bool isAttached;
     void Awake()
     {
         rb2d = GetComponentInChildren<Rigidbody2D>();
     }
-
     private void Start()
     {
-        killCount = 0;
+        isAttached = false;
     }
-
     private void Update()
     {
-        if(rb2d.velocity != Vector2.zero)
-        {
-            faceDirection = transform.right * Input.GetAxisRaw("Horizontal") + transform.up * Input.GetAxisRaw("Vertical");
-        }
-        else
-        {
-            faceDirection = transform.right;
-        }
+        faceDirection = transform.right * Input.GetAxisRaw("Horizontal") + transform.up * Input.GetAxisRaw("Vertical");
         if (Input.GetKeyDown(KeyCode.K))
         {
             gameOver = true;
@@ -56,23 +39,18 @@ public class BunnyController : MonoBehaviour
         {
             Debug.Log("HIT!");
             hit.collider.gameObject.GetComponentInParent<FixedJoint2D>().enabled = true;
+            isAttached = true;
             hit.collider.gameObject.GetComponentInParent<FixedJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
         }
     }
-
     void FixedUpdate()
     {
+        position = transform.position;
         rb2d.velocity = Vector2.right * movementSpeed * Time.deltaTime * Input.GetAxisRaw("Horizontal") + Vector2.up * movementSpeed * Time.deltaTime * Input.GetAxisRaw("Vertical");
     }
-    private void LateUpdate()
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        if (gameOver)
-        {
-            Instantiate(death, transform.position, Quaternion.identity);
-            transform.position = Vector3.zero;
-            killCount++;
-            gameOver = false;
-        }
+       
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -92,10 +70,23 @@ public class BunnyController : MonoBehaviour
             gameOver = true;
         }
     }
+    private void LateUpdate()
+    {
+        if (gameOver)
+        {
+            Instantiate(death, transform.position, Quaternion.identity);
+            transform.position = Vector3.zero;
+            gameOver = false;
+        }
+    }
+
+    public Vector3 getPosition()
+    {
+        return position;
+    }
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.magenta;
-        Gizmos.DrawRay(transform.position, transform.position + faceDirection * rayDistance);
+        
     }
 }

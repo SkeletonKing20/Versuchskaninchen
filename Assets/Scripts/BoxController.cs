@@ -19,27 +19,4 @@ public class BoxController : MonoBehaviour
             GetComponent<FixedJoint2D>().enabled = false;
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Bullet"))
-        {
-            rb2d.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Bullet"))
-        {
-            rb2d.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.None;
-        }
-    }
-
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            rb2d.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.None;
-        }
-    }
 }
