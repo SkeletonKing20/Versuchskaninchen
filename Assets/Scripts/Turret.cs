@@ -7,7 +7,7 @@ public class Turret : MonoBehaviour
     public Bullet bullet;
     int coolDown;
     public TurretHead turretHead;
-    public BunnyController target;
+    public GameObject target;
     private void Awake()
     {
         

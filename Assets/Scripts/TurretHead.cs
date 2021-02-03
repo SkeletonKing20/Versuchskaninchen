@@ -5,13 +5,13 @@ using UnityEngine;
 public class TurretHead : MonoBehaviour
 {
     private Quaternion rotation;
-    public BunnyController target;
+    public GameObject target;
     public float offset;
     private void Update()
     {
         if (Input.GetButtonDown("Jump"))
         {
-            Vector3 diff = transform.position - target.getPosition();
+            Vector3 diff = transform.position - target.transform.position;
 
             diff.Normalize();
 
@@ -27,7 +27,7 @@ public class TurretHead : MonoBehaviour
         return rotation;
     }
 
-    public void turnTowardsPlayer(BunnyController target)
+    public void turnTowardsPlayer(GameObject target)
     {
         Vector3 diff = transform.position - target.transform.position;
 

@@ -5,7 +5,6 @@ using UnityEngine;
 public class AnimationTurret : MonoBehaviour
 {
     Animator animator;
-    Turret turret;
     int paramIDShot;
     void Awake()
     {

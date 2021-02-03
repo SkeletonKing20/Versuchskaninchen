@@ -6,25 +6,41 @@ using UnityEngine.Events;
 public class BunnyController : MonoBehaviour
 {
     Rigidbody2D rb2d;
+    RaycastHit2D hit;
     public bool isHolding;
     public UnityEvent turnEvent;
     private float movementSpeed = 100f;
     bool gameOver;
-    public DeathController death;
+    public GameObject death;
     Vector3 position;
+    public LayerMask boxMask;
+    public float rayDistance;
+    public GameObject box;
+    Vector3 faceDirection;
+    bool isAttached;
     void Awake()
     {
         rb2d = GetComponentInChildren<Rigidbody2D>();
     }
     private void Start()
     {
-        isHolding = false;
+        isAttached = false;
     }
     private void Update()
     {
+        faceDirection = transform.right * Input.GetAxisRaw("Horizontal") + transform.up * Input.GetAxisRaw("Vertical");
         if (Input.GetKeyDown(KeyCode.K))
         {
             gameOver = true;
+        }
+
+        hit = Physics2D.Raycast(transform.position, faceDirection, rayDistance, boxMask);
+        if (Input.GetButtonDown("Jump") && hit.collider != null)
+        {
+            Debug.Log("HIT!");
+            hit.collider.gameObject.GetComponentInParent<FixedJoint2D>().enabled = true;
+            isAttached = true;
+            hit.collider.gameObject.GetComponentInParent<FixedJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
         }
     }
     void FixedUpdate()
@@ -34,17 +50,7 @@ public class BunnyController : MonoBehaviour
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if ((collision.gameObject.CompareTag("Turret") || collision.gameObject.CompareTag("Box")) && Input.GetButton("Jump"))
-        {
-            if(Input.GetAxisRaw("Horizontal") != 0)
-            {
-                collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * Input.GetAxisRaw("Horizontal"));
-            }
-        }
-        else if((collision.gameObject.CompareTag("Turret") || collision.gameObject.CompareTag("Box")) && Input.GetButtonUp("Jump"))
-        {
-            isHolding = false;
-        }
+       
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -77,5 +83,10 @@ public class BunnyController : MonoBehaviour
     public Vector3 getPosition()
     {
         return position;
+    }
+
+    private void OnDrawGizmos()
+    {
+        
     }
 }
