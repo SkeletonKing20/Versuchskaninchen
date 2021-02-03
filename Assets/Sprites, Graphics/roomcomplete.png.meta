@@ -1,6 +1,10 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: ac3f0ea0d796c1d4eb09537c3e2f8a6d
+=======
+guid: 14712650b3915fc489fda6be290e6fe4
+>>>>>>> parent of dcf2a9b... Merge branch 'main' of https://github.com/SkeletonKing20/Prototyping into main
 =======
 guid: 14712650b3915fc489fda6be290e6fe4
 >>>>>>> parent of dcf2a9b... Merge branch 'main' of https://github.com/SkeletonKing20/Prototyping into main
@@ -60,6 +64,11 @@ TextureImporter:
   textureShape: 1
   singleChannelComponent: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  flipbookRows: 1
+  flipbookColumns: 1
+>>>>>>> parent of dcf2a9b... Merge branch 'main' of https://github.com/SkeletonKing20/Prototyping into main
 =======
   flipbookRows: 1
   flipbookColumns: 1
