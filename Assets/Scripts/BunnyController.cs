@@ -6,25 +6,30 @@ using UnityEngine.Events;
 public class BunnyController : MonoBehaviour
 {
     Rigidbody2D rb2d;
+
     RaycastHit2D hit;
-    public bool isHolding;
+
     public UnityEvent turnEvent;
-    private float movementSpeed = 100f;
-    bool gameOver;
-    public GameObject death;
-    Vector3 position;
-    public LayerMask boxMask;
-    public float rayDistance;
+
     public GameObject box;
+    public GameObject death;
+
+    public LayerMask boxMask;
+
+    bool gameOver;
+    public bool isHolding;
+
+    private float movementSpeed = 100f;
+    public float rayDistance;
+
     Vector3 faceDirection;
-    bool isAttached;
+
     void Awake()
     {
         rb2d = GetComponentInChildren<Rigidbody2D>();
     }
     private void Start()
     {
-        isAttached = false;
     }
     private void Update()
     {
@@ -39,18 +44,21 @@ public class BunnyController : MonoBehaviour
         {
             Debug.Log("HIT!");
             hit.collider.gameObject.GetComponentInParent<FixedJoint2D>().enabled = true;
-            isAttached = true;
             hit.collider.gameObject.GetComponentInParent<FixedJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
         }
     }
     void FixedUpdate()
     {
-        position = transform.position;
         rb2d.velocity = Vector2.right * movementSpeed * Time.deltaTime * Input.GetAxisRaw("Horizontal") + Vector2.up * movementSpeed * Time.deltaTime * Input.GetAxisRaw("Vertical");
     }
-    private void OnCollisionStay2D(Collision2D collision)
+    private void LateUpdate()
     {
-       
+        if (gameOver)
+        {
+            Instantiate(death, transform.position, Quaternion.identity);
+            transform.position = Vector3.zero;
+            gameOver = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -69,24 +77,5 @@ public class BunnyController : MonoBehaviour
         {
             gameOver = true;
         }
-    }
-    private void LateUpdate()
-    {
-        if (gameOver)
-        {
-            Instantiate(death, transform.position, Quaternion.identity);
-            transform.position = Vector3.zero;
-            gameOver = false;
-        }
-    }
-
-    public Vector3 getPosition()
-    {
-        return position;
-    }
-
-    private void OnDrawGizmos()
-    {
-        
     }
 }
