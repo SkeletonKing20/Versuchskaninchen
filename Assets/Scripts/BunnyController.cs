@@ -61,16 +61,6 @@ public class BunnyController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        
-        if (other.gameObject.CompareTag("Turret"))
-        {
-            Debug.Log("Why");
-            turnEvent.Invoke();
-        }
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
