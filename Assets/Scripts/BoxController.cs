@@ -34,12 +34,4 @@ public class BoxController : MonoBehaviour
             rb2d.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.None;
         }
     }
-
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            rb2d.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.None;
-        }
-    }
 }
