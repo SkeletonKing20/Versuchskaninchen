@@ -20,7 +20,13 @@ public class BunnyController : MonoBehaviour
     {
         isHolding = false;
     }
-    // Update is called once per frame
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            gameOver = true;
+        }
+    }
     void FixedUpdate()
     {
         position = transform.position;
