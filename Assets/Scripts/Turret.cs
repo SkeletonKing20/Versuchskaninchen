@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
-    public Bullet bullet;
     int coolDown;
+    public Bullet bullet;
     public TurretHead turretHead;
-    public GameObject target;
     private void Awake()
     {
         
@@ -20,20 +19,12 @@ public class Turret : MonoBehaviour
             Instantiate(bullet, turretHead.transform.position, turretHead.getRotation());
         }
     }
-
-    // Update is called once per frame
-    public bool shotsFired()
-    {
-        return true;
-    }
-
     private void Update()
     {
         shoot();
-    }
-
-    public void headRotation()
-    {
-        turretHead.turnTowardsPlayer(target);
+        if (Input.GetButtonUp("Jump"))
+        {
+            GetComponent<FixedJoint2D>().enabled = false;
+        }
     }
 }

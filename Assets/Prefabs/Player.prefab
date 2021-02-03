@@ -99,8 +99,8 @@ MonoBehaviour:
   death: {fileID: 2387137651082598251, guid: b45e6cb8e237ec44d9a6e2aa82f6fb8c, type: 3}
   boxMask:
     serializedVersion: 2
-    m_Bits: 256
-  rayDistance: 17.07
+    m_Bits: 8192
+  rayDistance: 5
   box: {fileID: 7783696964663394578, guid: b8e805c312c05124787423385ebff495, type: 3}
 --- !u!66 &7102319396956858730
 CompositeCollider2D:
