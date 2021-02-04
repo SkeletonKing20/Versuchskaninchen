@@ -15,7 +15,7 @@ public class Turret : MonoBehaviour
     {
         if(Time.time > coolDown)
         {
-            coolDown += 2;
+            coolDown += 1;
             Instantiate(bullet, turretHead.transform.position, turretHead.getRotation());
         }
     }

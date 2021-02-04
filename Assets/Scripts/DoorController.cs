@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
+    public AudioClip clip;
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("WTF");
+        AudioSource.PlayClipAtPoint(clip, transform.position);
         this.gameObject.SetActive(false);
     }
 }

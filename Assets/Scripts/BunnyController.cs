@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+using UnityEngine.UI;
 public class BunnyController : MonoBehaviour
 {
     Rigidbody2D rb2d;
@@ -13,11 +13,12 @@ public class BunnyController : MonoBehaviour
 
     public GameObject box;
     public GameObject death;
-
+    public Text text;
     public LayerMask boxMask;
 
     public bool isHolding;
 
+    private int killCount;
     private float movementSpeed = 100f;
     public float rayDistance;
 
@@ -33,6 +34,7 @@ public class BunnyController : MonoBehaviour
     }
     private void Update()
     {
+        //text = killCount;
         faceDirection = transform.right * Input.GetAxisRaw("Horizontal") + transform.up * Input.GetAxisRaw("Vertical");
         if (Input.GetKeyDown(KeyCode.K))
         {
@@ -55,6 +57,7 @@ public class BunnyController : MonoBehaviour
     {
             Instantiate(death, transform.position, Quaternion.identity);
             transform.position = startPosition;
+            killCount++;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
