@@ -16,27 +16,27 @@ public class BunnyController : MonoBehaviour
 
     public LayerMask boxMask;
 
-    bool gameOver;
     public bool isHolding;
 
     private float movementSpeed = 100f;
     public float rayDistance;
 
     Vector3 faceDirection;
-
+    Vector3 startPosition;
     void Awake()
     {
         rb2d = GetComponentInChildren<Rigidbody2D>();
     }
     private void Start()
     {
+        startPosition = transform.position;
     }
     private void Update()
     {
         faceDirection = transform.right * Input.GetAxisRaw("Horizontal") + transform.up * Input.GetAxisRaw("Vertical");
         if (Input.GetKeyDown(KeyCode.K))
         {
-            gameOver = true;
+            gameOver();
         }
 
         hit = Physics2D.Raycast(transform.position, faceDirection, rayDistance, boxMask);
@@ -51,21 +51,17 @@ public class BunnyController : MonoBehaviour
     {
         rb2d.velocity = Vector2.right * movementSpeed * Time.deltaTime * Input.GetAxisRaw("Horizontal") + Vector2.up * movementSpeed * Time.deltaTime * Input.GetAxisRaw("Vertical");
     }
-    private void LateUpdate()
+    public void gameOver()
     {
-        if (gameOver)
-        {
             Instantiate(death, transform.position, Quaternion.identity);
-            transform.position = Vector3.zero;
-            gameOver = false;
-        }
+            transform.position = startPosition;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            gameOver = true;
+            gameOver();
         }
     }
 }
