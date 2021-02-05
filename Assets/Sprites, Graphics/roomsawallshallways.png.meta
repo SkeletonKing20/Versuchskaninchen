@@ -38,6 +38,9 @@ TextureImporter:
   - first:
       213: -5082692394155218717
     second: roomsawallshallways_11
+  - first:
+      213: -7101256710528723552
+    second: roomsawallshallways_12
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -91,6 +94,8 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
@@ -133,7 +138,7 @@ TextureImporter:
         width: 94
         height: 632
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -154,7 +159,7 @@ TextureImporter:
         width: 627
         height: 750
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -175,7 +180,7 @@ TextureImporter:
         width: 1021
         height: 1167
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,12 +196,12 @@ TextureImporter:
       name: roomsawallshallways_3
       rect:
         serializedVersion: 2
-        x: 139
-        y: 985
-        width: 2662
-        height: 1872
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2948
+        y: 707
+        width: 82
+        height: 67
+      alignment: 9
+      pivot: {x: -0.5617616, y: 1.465323}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -217,7 +222,7 @@ TextureImporter:
         width: 93
         height: 523
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -238,7 +243,7 @@ TextureImporter:
         width: 950
         height: 1413
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -259,7 +264,7 @@ TextureImporter:
         width: 82
         height: 392
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -280,7 +285,7 @@ TextureImporter:
         width: 86
         height: 271
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -301,7 +306,7 @@ TextureImporter:
         width: 272
         height: 274
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -322,7 +327,7 @@ TextureImporter:
         width: 388
         height: 580
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -343,7 +348,7 @@ TextureImporter:
         width: 587
         height: 386
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -364,7 +369,7 @@ TextureImporter:
         width: 530
         height: 520
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -372,6 +377,27 @@ TextureImporter:
       bones: []
       spriteID: 3e86ccf5236a679b0800000000000000
       internalID: -5082692394155218717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roomsawallshallways_12
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 1802
+        width: 245
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a5931655a4437d90800000000000000
+      internalID: -7101256710528723552
       vertices: []
       indices: 
       edges: []
