@@ -5,6 +5,7 @@ using UnityEngine;
 public class BoxController : MonoBehaviour
 {
     Rigidbody2D rb2d;
+    public ButtonController button;
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -18,5 +19,15 @@ public class BoxController : MonoBehaviour
         {
             GetComponent<FixedJoint2D>().enabled = false;
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        button.SetPressed(true);
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        button.SetPressed(false);
     }
 }

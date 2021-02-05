@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class BunnyController : MonoBehaviour
 {
     Rigidbody2D rb2d;
@@ -13,13 +14,15 @@ public class BunnyController : MonoBehaviour
 
     public GameObject box;
     public GameObject death;
-    public Text text;
+    public GameObject blueUICard;
+    public GameObject yellowUICard;
+    public Text UIText;
     public LayerMask boxMask;
 
     public bool isHolding;
 
     private int killCount;
-    private float movementSpeed = 100f;
+    private float movementSpeed = 250f;
     public float rayDistance;
 
     Vector3 faceDirection;
@@ -34,15 +37,15 @@ public class BunnyController : MonoBehaviour
     }
     private void Update()
     {
-        //text = killCount;
+        UIText.text = killCount.ToString();
         faceDirection = transform.right * Input.GetAxisRaw("Horizontal") + transform.up * Input.GetAxisRaw("Vertical");
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKey(KeyCode.K))
         {
             gameOver();
         }
 
         hit = Physics2D.Raycast(transform.position, faceDirection, rayDistance, boxMask);
-        if (Input.GetButtonDown("Jump") && hit.collider != null)
+        if (Input.GetButton("Jump") && hit.collider != null)
         {
             Debug.Log("HIT!");
             hit.collider.gameObject.GetComponentInParent<FixedJoint2D>().enabled = true;
@@ -65,6 +68,14 @@ public class BunnyController : MonoBehaviour
         if (collision.gameObject.CompareTag("Bullet"))
         {
             gameOver();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("LoadNextScene"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
