@@ -67,6 +67,8 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
@@ -108,8 +110,8 @@ TextureImporter:
         y: 64
         width: 201
         height: 404
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.65697193, y: 0.3625953}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -129,8 +131,8 @@ TextureImporter:
         y: 64
         width: 199
         height: 400
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.64948964, y: 0.3583334}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -150,8 +152,8 @@ TextureImporter:
         y: 67
         width: 185
         height: 397
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.59258306, y: 0.3485523}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -167,12 +169,12 @@ TextureImporter:
       name: PushDown2
       rect:
         serializedVersion: 2
-        x: 774
+        x: 779
         y: 67
         width: 186
         height: 397
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5872389, y: 0.34060487}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
