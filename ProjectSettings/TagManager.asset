@@ -8,6 +8,7 @@ TagManager:
   - Turret
   - Wall
   - Box
+  - LoadNextScene
   layers:
   - Default
   - TransparentFX

@@ -129,6 +129,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 3dd8dc6beae80bb4face814a07198a8d, type: 3}
+  bunny: {fileID: 5148816058736224633, guid: 521b1cda0c2bce948832c25fb1e2b411, type: 3}
+  color: 0
 --- !u!60 &225445602353068168
 PolygonCollider2D:
   m_ObjectHideFlags: 0
