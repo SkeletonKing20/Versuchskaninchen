@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7783696964663394576}
   - component: {fileID: 7783696964663394579}
   - component: {fileID: 516340153775529385}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Box
   m_TagString: Box
   m_Icon: {fileID: 0}
@@ -85,6 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b8b0cdf6dd6bcc4dac635e74f3cf4c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  button: {fileID: 0}
 --- !u!1 &7783696965148210344
 GameObject:
   m_ObjectHideFlags: 0

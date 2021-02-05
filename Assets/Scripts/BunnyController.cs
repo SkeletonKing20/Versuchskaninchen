@@ -7,11 +7,13 @@ using UnityEngine.SceneManagement;
 public class BunnyController : MonoBehaviour
 {
     Rigidbody2D rb2d;
+    BoxCollider2D boxC2d;
+    SpriteRenderer spriteR;
 
     RaycastHit2D hit;
 
     public UnityEvent turnEvent;
-
+    public AudioClip clip;
     public GameObject box;
     public GameObject death;
     public GameObject blueUICard;
@@ -20,16 +22,36 @@ public class BunnyController : MonoBehaviour
     public LayerMask boxMask;
 
     public bool isHolding;
-
+    bool isGameOver = false;
     private int killCount;
     private float movementSpeed = 250f;
     public float rayDistance;
 
     Vector3 faceDirection;
     Vector3 startPosition;
+
+    IEnumerator waitSeconds(float seconds)
+    {
+        if(isGameOver)
+        {
+            spriteR.enabled = false;
+            boxC2d.enabled = false;
+            Instantiate(death, transform.position, Quaternion.identity);
+            AudioSource.PlayClipAtPoint(clip, transform.position);
+            yield return null;
+        }
+        yield return new WaitForSeconds(seconds);
+        transform.position = startPosition;
+        spriteR.enabled = true;
+        boxC2d.enabled = true;
+        rb2d.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
+        isGameOver = false;
+    }
     void Awake()
     {
         rb2d = GetComponentInChildren<Rigidbody2D>();
+        boxC2d = GetComponentInChildren<BoxCollider2D>();
+        spriteR = GetComponentInChildren<SpriteRenderer>();
     }
     private void Start()
     {
@@ -38,8 +60,9 @@ public class BunnyController : MonoBehaviour
     private void Update()
     {
         UIText.text = killCount.ToString();
-        faceDirection = transform.right * Input.GetAxisRaw("Horizontal") + transform.up * Input.GetAxisRaw("Vertical");
-        if (Input.GetKey(KeyCode.K))
+        faceDirection = (transform.right * Input.GetAxisRaw("Horizontal") + transform.up * Input.GetAxisRaw("Vertical")).normalized;
+        
+        if (Input.GetKeyDown(KeyCode.K))
         {
             gameOver();
         }
@@ -54,13 +77,15 @@ public class BunnyController : MonoBehaviour
     }
     void FixedUpdate()
     {
+        if(isGameOver == false)
         rb2d.velocity = Vector2.right * movementSpeed * Time.deltaTime * Input.GetAxisRaw("Horizontal") + Vector2.up * movementSpeed * Time.deltaTime * Input.GetAxisRaw("Vertical");
     }
     public void gameOver()
     {
-            Instantiate(death, transform.position, Quaternion.identity);
-            transform.position = startPosition;
-            killCount++;
+        rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
+        isGameOver = true;
+        StartCoroutine(waitSeconds(1f));
+        killCount++;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

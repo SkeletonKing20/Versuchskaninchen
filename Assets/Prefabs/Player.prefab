@@ -96,6 +96,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  clip: {fileID: 8300000, guid: aa1d988eb016e194192e13991480d0aa, type: 3}
   box: {fileID: 7783696964663394578, guid: b8e805c312c05124787423385ebff495, type: 3}
   death: {fileID: 2387137651082598251, guid: b45e6cb8e237ec44d9a6e2aa82f6fb8c, type: 3}
   blueUICard: {fileID: 0}
@@ -168,7 +169,7 @@ Transform:
   m_GameObject: {fileID: 6863685118433634671}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 12, y: 11, z: 1}
   m_Children: []
   m_Father: {fileID: 6863685117079564051}
   m_RootOrder: 0
@@ -256,10 +257,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.009139329, y: 0.1470986}
+  m_Offset: {x: -0.023290329, y: 0.014350325}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.58031136, y: 0.045778316}
+    pivot: {x: 0.65, y: 0.37}
     oldSize: {x: 0.201, y: 0.403}
     newSize: {x: 1.89, y: 4}
     adaptiveTilingThreshold: 0.5
@@ -267,5 +268,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.13702467, y: 0.31719467}
+  m_Size: {x: 0.1369769, y: 0.316943}
   m_EdgeRadius: 0

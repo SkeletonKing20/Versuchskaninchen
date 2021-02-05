@@ -67,6 +67,8 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
@@ -109,7 +111,7 @@ TextureImporter:
         width: 205
         height: 394
       alignment: 9
-      pivot: {x: 0.5, y: 0.04}
+      pivot: {x: 0.65, y: 0.37}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -130,7 +132,7 @@ TextureImporter:
         width: 200
         height: 395
       alignment: 9
-      pivot: {x: 0.5415094, y: 0.05634694}
+      pivot: {x: 0.65, y: 0.37}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -151,7 +153,7 @@ TextureImporter:
         width: 201
         height: 403
       alignment: 9
-      pivot: {x: 0.58031136, y: 0.045778316}
+      pivot: {x: 0.65, y: 0.37}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -172,7 +174,7 @@ TextureImporter:
         width: 195
         height: 403
       alignment: 9
-      pivot: {x: 0.58987755, y: 0.043489404}
+      pivot: {x: 0.65, y: 0.37}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
