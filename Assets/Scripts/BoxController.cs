@@ -23,11 +23,17 @@ public class BoxController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        button.SetPressed(true);
+        if (collision.gameObject.CompareTag("Button"))
+        {
+            button.SetPressed(true);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        button.SetPressed(false);
+        if (collision.gameObject.CompareTag("Button"))
+        {
+            button.SetPressed(false);
+        }
     }
 }

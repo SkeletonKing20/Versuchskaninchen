@@ -97,10 +97,13 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   clip: {fileID: 8300000, guid: aa1d988eb016e194192e13991480d0aa, type: 3}
+  whoosh: {fileID: 8300000, guid: 5029b7eb19b37b94a9aa716f52d2f760, type: 3}
   box: {fileID: 7783696964663394578, guid: b8e805c312c05124787423385ebff495, type: 3}
   death: {fileID: 2387137651082598251, guid: b45e6cb8e237ec44d9a6e2aa82f6fb8c, type: 3}
+  pitFall: {fileID: 2347432726416472244, guid: 151974160d871674b8d9d7c915090bb7, type: 3}
   blueUICard: {fileID: 0}
   yellowUICard: {fileID: 0}
+  spriteBunny: {fileID: 6863685118433634671}
   UIText: {fileID: 0}
   boxMask:
     serializedVersion: 2

@@ -9,6 +9,10 @@ TagManager:
   - Wall
   - Box
   - LoadNextScene
+  - Ground
+  - Pitfall
+  - Button
+  - Trapdoor
   layers:
   - Default
   - TransparentFX

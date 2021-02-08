@@ -14,15 +14,20 @@ public class BunnyController : MonoBehaviour
 
     public UnityEvent turnEvent;
     public AudioClip clip;
+    public AudioClip whoosh;
     public GameObject box;
     public GameObject death;
+    public GameObject pitFall;
     public GameObject blueUICard;
     public GameObject yellowUICard;
+    public GameObject spriteBunny;
     public Text UIText;
     public LayerMask boxMask;
 
     public bool isHolding;
     bool isGameOver = false;
+    bool onTrapdoor;
+
     private int killCount;
     private float movementSpeed = 250f;
     public float rayDistance;
@@ -30,7 +35,7 @@ public class BunnyController : MonoBehaviour
     Vector3 faceDirection;
     Vector3 startPosition;
 
-    IEnumerator waitSeconds(float seconds)
+    IEnumerator deathAnim(float seconds, GameObject death, AudioClip clip)
     {
         if(isGameOver)
         {
@@ -84,7 +89,7 @@ public class BunnyController : MonoBehaviour
     {
         rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
         isGameOver = true;
-        StartCoroutine(waitSeconds(1f));
+        StartCoroutine(deathAnim(1f, death, clip));
         killCount++;
     }
 
@@ -101,6 +106,29 @@ public class BunnyController : MonoBehaviour
         if (collision.gameObject.CompareTag("LoadNextScene"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        if (collision.gameObject.CompareTag("Trapdoor"))
+        {
+            onTrapdoor = true;
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Pitfall") && !onTrapdoor)
+        {
+            rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
+            transform.position = collision.transform.position;
+            isGameOver = true;
+            StartCoroutine(deathAnim(2f, pitFall, whoosh));
+            killCount++;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Trapdoor"))
+        {
+            onTrapdoor = false;
         }
     }
 }
