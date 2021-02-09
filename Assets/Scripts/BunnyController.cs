@@ -116,9 +116,9 @@ public class BunnyController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Pitfall") && !onTrapdoor)
         {
+            isGameOver = true;
             rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
             transform.position = collision.transform.position;
-            isGameOver = true;
             StartCoroutine(deathAnim(2f, pitFall, whoosh));
             killCount++;
         }

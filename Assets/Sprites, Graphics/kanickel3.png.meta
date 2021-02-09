@@ -127,12 +127,12 @@ TextureImporter:
       name: kanickel3_1
       rect:
         serializedVersion: 2
-        x: 244
+        x: 296
         y: 56
-        width: 244
-        height: 401
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 181
+        height: 391
+      alignment: 9
+      pivot: {x: 0.41646278, y: 0.3531176}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -148,12 +148,12 @@ TextureImporter:
       name: kanickel3_2
       rect:
         serializedVersion: 2
-        x: 488
+        x: 532
         y: 55
-        width: 244
-        height: 403
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 184
+        height: 393
+      alignment: 9
+      pivot: {x: 0.42486772, y: 0.3531176}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -169,12 +169,12 @@ TextureImporter:
       name: kanickel3_3
       rect:
         serializedVersion: 2
-        x: 732
+        x: 763
         y: 55
-        width: 244
-        height: 403
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 184
+        height: 395
+      alignment: 9
+      pivot: {x: 0.42017266, y: 0.3531176}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

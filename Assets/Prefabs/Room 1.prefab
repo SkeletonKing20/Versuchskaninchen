@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1313200720584122933}
   - component: {fileID: 6272378713866210712}
   - component: {fileID: 3988165440259260128}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Room 1
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1313200720828101037}
   - component: {fileID: 1313200720828101034}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -268,7 +268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7198382074408428241}
   - component: {fileID: 1821843827497094592}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Walls
   m_TagString: Ground
   m_Icon: {fileID: 0}
