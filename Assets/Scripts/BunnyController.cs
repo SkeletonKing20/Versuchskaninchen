@@ -17,10 +17,20 @@ public class BunnyController : MonoBehaviour
     public AudioClip whoosh;
     public GameObject box;
     public GameObject death;
+    public GameObject electrocution;
     public GameObject pitFall;
     public GameObject blueUICard;
     public GameObject yellowUICard;
     public GameObject spriteBunny;
+    public Sprite pushHorizontal_1;
+    public Sprite pushHorizontal_2;
+    public Sprite pushHorizontal_3;
+    public Sprite pushUp_1;
+    public Sprite pushUp_2;
+    public Sprite pushUp_3;
+    public Sprite pushDown_1;
+    public Sprite pushDown_2;
+    public Sprite pushDown_3;
     public Text UIText;
     public LayerMask boxMask;
 
@@ -65,8 +75,8 @@ public class BunnyController : MonoBehaviour
     private void Update()
     {
         UIText.text = killCount.ToString();
-        faceDirection = (transform.right * Input.GetAxisRaw("Horizontal") + transform.up * Input.GetAxisRaw("Vertical")).normalized;
-        
+        //faceDirection = (transform.right * Input.GetAxisRaw("Horizontal") + transform.up * Input.GetAxisRaw("Vertical")).normalized;
+        calcDirection();
         if (Input.GetKeyDown(KeyCode.K))
         {
             gameOver();
@@ -99,6 +109,10 @@ public class BunnyController : MonoBehaviour
         {
             gameOver();
         }
+        if (collision.gameObject.CompareTag("Door"))
+        {
+            electrocute();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -123,12 +137,38 @@ public class BunnyController : MonoBehaviour
             killCount++;
         }
     }
-
+    private void calcDirection()
+    {
+        if (spriteR.sprite == pushUp_1 || spriteR.sprite == pushUp_2 || spriteR.sprite == pushUp_3)
+        {
+            faceDirection = transform.up;
+        }
+        else if (spriteR.sprite == pushDown_1 || spriteR.sprite == pushDown_2 || spriteR.sprite == pushDown_3)
+        {
+            faceDirection = transform.up * -1f;
+        }
+        else if (spriteR.sprite == pushHorizontal_1 || spriteR.sprite == pushHorizontal_2 || spriteR.sprite == pushHorizontal_3 && spriteR.flipX == true)
+        {
+            faceDirection = transform.right * -1f;
+        }
+        else
+        {
+            faceDirection = transform.right;
+        }
+    }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Trapdoor"))
         {
             onTrapdoor = false;
         }
+    }
+
+    public void electrocute()
+    {
+        rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
+        isGameOver = true;
+        StartCoroutine(deathAnim(1f, electrocution, clip));
+        killCount++;
     }
 }

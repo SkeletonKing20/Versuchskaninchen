@@ -209,6 +209,7 @@ GameObject:
   - component: {fileID: 7706041693097160284}
   - component: {fileID: 8494106726126533245}
   - component: {fileID: 1589484745394367348}
+  - component: {fileID: 8070536234858035631}
   m_Layer: 8
   m_Name: GunTurretHeadOpen
   m_TagString: Turret
@@ -330,3 +331,22 @@ PolygonCollider2D:
       - {x: 0.8215825, y: 0.6057669}
       - {x: 0.55128884, y: 0.613658}
       - {x: 0.545, y: 2.665}
+--- !u!95 &8070536234858035631
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5137186294960809643}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 99f3e7bc8c148c44695ca3583fb2ac84, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
