@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5658199646655829268}
   - component: {fileID: 2388972119096599097}
   - component: {fileID: 2822084353931314047}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pitfall_1
   m_TagString: Pitfall
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6878315770577211034}
   - component: {fileID: 6887894134823026842}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

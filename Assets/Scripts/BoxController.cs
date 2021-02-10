@@ -5,10 +5,13 @@ using UnityEngine;
 public class BoxController : MonoBehaviour
 {
     Rigidbody2D rb2d;
+    FixedJoint2D fixJ2d;
     public ButtonController button;
+    public int weight;
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        fixJ2d = GetComponent<FixedJoint2D>();
     }
 
     // Update is called once per frame
@@ -17,7 +20,13 @@ public class BoxController : MonoBehaviour
         rb2d.velocity = Vector3.zero;
         if (Input.GetButtonUp("Jump"))
         {
-            GetComponent<FixedJoint2D>().enabled = false;
+            fixJ2d.enabled = false;
+            rb2d.mass = 2000;
+        }
+
+        if(fixJ2d.enabled == true)
+        {
+            rb2d.mass = 1;
         }
     }
 
@@ -25,7 +34,7 @@ public class BoxController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Button"))
         {
-            button.SetPressed(true);
+            button.SetPressed(weight);
         }
     }
 
@@ -33,7 +42,7 @@ public class BoxController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Button"))
         {
-            button.SetPressed(false);
+            button.SetPressed(-1 * weight);
         }
     }
 }

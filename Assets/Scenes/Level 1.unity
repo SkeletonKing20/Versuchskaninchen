@@ -542,6 +542,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 905054665}
     m_Modifications:
+    - target: {fileID: 516340153775529385, guid: b8e805c312c05124787423385ebff495, type: 3}
+      propertyPath: weight
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7783696964663394576, guid: b8e805c312c05124787423385ebff495, type: 3}
       propertyPath: m_Constraints
       value: 6
@@ -620,11 +624,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7783696965148210358, guid: b8e805c312c05124787423385ebff495, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 4.71
+      value: 4.64
       objectReference: {fileID: 0}
     - target: {fileID: 7783696965148210358, guid: b8e805c312c05124787423385ebff495, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 4.7
+      value: 4.68
       objectReference: {fileID: 0}
     - target: {fileID: 7783696965148210359, guid: b8e805c312c05124787423385ebff495, type: 3}
       propertyPath: m_Sprite
@@ -1679,6 +1683,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 905054665}
     m_Modifications:
+    - target: {fileID: 516340153775529385, guid: b8e805c312c05124787423385ebff495, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 423345275}
+    - target: {fileID: 516340153775529385, guid: b8e805c312c05124787423385ebff495, type: 3}
+      propertyPath: weight
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7783696964663394577, guid: b8e805c312c05124787423385ebff495, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -1761,9 +1773,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1365114684}
     - target: {fileID: 5148816058736224633, guid: 521b1cda0c2bce948832c25fb1e2b411, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 423345275}
+    - target: {fileID: 5148816058736224633, guid: 521b1cda0c2bce948832c25fb1e2b411, type: 3}
       propertyPath: blueUICard
       value: 
       objectReference: {fileID: 293758895}
+    - target: {fileID: 5148816058736224633, guid: 521b1cda0c2bce948832c25fb1e2b411, type: 3}
+      propertyPath: rayDistance
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5148816058736224633, guid: 521b1cda0c2bce948832c25fb1e2b411, type: 3}
       propertyPath: yellowUICard
       value: 
@@ -1955,8 +1975,9 @@ GameObject:
   - component: {fileID: 1887507765}
   - component: {fileID: 1887507764}
   - component: {fileID: 1887507766}
+  - component: {fileID: 1887507768}
   - component: {fileID: 1887507767}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Platform
   m_TagString: Trapdoor
   m_Icon: {fileID: 0}
@@ -2021,13 +2042,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1887507763}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.65, y: -18.72, z: 7}
+  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
+  m_LocalPosition: {x: 13.64, y: -18.72, z: 1}
   m_LocalScale: {x: 0.5151507, y: 0.5151507, z: 0.5151507}
   m_Children: []
   m_Father: {fileID: 905054665}
   m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
 --- !u!61 &1887507766
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2075,6 +2096,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1887507768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887507763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b939c9a8200e9c441afe2e5f5cfe9eab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  length: 0
+  speed: 100
+  targetPosition: {x: 9, y: -18.72, z: 1}
+  trapDoorNumber: 1
 --- !u!4 &1998653710 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3993993326654005833, guid: 06856c7f210235b49b1b37d9d5cd4255, type: 3}
@@ -2092,7 +2129,8 @@ GameObject:
   - component: {fileID: 2015356255}
   - component: {fileID: 2015356254}
   - component: {fileID: 2015356253}
-  m_Layer: 0
+  - component: {fileID: 2015356256}
+  m_Layer: 11
   m_Name: Platform
   m_TagString: Trapdoor
   m_Icon: {fileID: 0}
@@ -2107,7 +2145,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2015356251}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 16.07, y: -21.07, z: 0}
+  m_LocalPosition: {x: 16.07, y: -20.17, z: 1}
   m_LocalScale: {x: 0.5151507, y: 0.5151507, z: 0.5151507}
   m_Children: []
   m_Father: {fileID: 905054665}
@@ -2211,6 +2249,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2015356256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015356251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b939c9a8200e9c441afe2e5f5cfe9eab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  length: 0
+  speed: 100
+  targetPosition: {x: 16.07, y: -26, z: 1}
+  trapDoorNumber: 2
 --- !u!4 &2018307927 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3993993326654005833, guid: 06856c7f210235b49b1b37d9d5cd4255, type: 3}
@@ -2452,6 +2506,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 905054665}
     m_Modifications:
+    - target: {fileID: 1313200720584122933, guid: 3fde2122e618df645bc8f2ad9aa89179, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1313200720584122935, guid: 3fde2122e618df645bc8f2ad9aa89179, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -3801,6 +3859,10 @@ PrefabInstance:
       propertyPath: button
       value: 
       objectReference: {fileID: 423345275}
+    - target: {fileID: 516340153775529385, guid: b8e805c312c05124787423385ebff495, type: 3}
+      propertyPath: weight
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7783696964663394576, guid: b8e805c312c05124787423385ebff495, type: 3}
       propertyPath: m_Constraints
       value: 4

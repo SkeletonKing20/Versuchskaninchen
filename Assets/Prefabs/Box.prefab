@@ -85,7 +85,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b8b0cdf6dd6bcc4dac635e74f3cf4c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 0}
+  button: {fileID: 8247461471247639421, guid: 828aa2455ed179d48a7aa4c7a290a746, type: 3}
+  weight: 0
 --- !u!1 &7783696965148210344
 GameObject:
   m_ObjectHideFlags: 0

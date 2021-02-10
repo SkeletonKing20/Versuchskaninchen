@@ -1,25 +1,16 @@
 fileFormatVersion: 2
-guid: 2eed60e3d2d7e244ebe3c81145b2242f
+guid: 0f3bbe731ea921847b8d085d70e37e35
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1466299971304238658
-    second: buttonSprite_0
+      213: -8142235001301476654
+    second: startopcred_0
   - first:
-      213: 4973559160122841545
-    second: buttonSprite_1
+      213: 5594774565797948313
+    second: startopcred_1
   - first:
-      213: 5617141306830812740
-    second: Button
-  - first:
-      213: -8860999275723039731
-    second: buttonPressed
-  - first:
-      213: -8932682982258554597
-    second: pressed1
-  - first:
-      213: -3806451720885664840
-    second: pressed2
+      213: 8223156075056183924
+    second: startopcred_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -109,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: buttonSprite_0
+      name: startopcred_0
       rect:
         serializedVersion: 2
-        x: 64
-        y: 1238
-        width: 461
-        height: 77
+        x: 116
+        y: 824
+        width: 304
+        height: 193
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,20 +114,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24e21cb1e08595410800000000000000
-      internalID: 1466299971304238658
+      spriteID: 2da5cadd768f00f80800000000000000
+      internalID: -8142235001301476654
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buttonSprite_1
+      name: startopcred_1
       rect:
         serializedVersion: 2
-        x: 794
-        y: 1256
-        width: 462
-        height: 52
+        x: 78
+        y: 460
+        width: 437
+        height: 183
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,20 +135,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c9138084b1a50540800000000000000
-      internalID: 4973559160122841545
+      spriteID: 99be6c043d1a4ad40800000000000000
+      internalID: 5594774565797948313
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Button
+      name: startopcred_2
       rect:
         serializedVersion: 2
-        x: 69
-        y: 647
-        width: 498
-        height: 505
+        x: 117
+        y: 140
+        width: 373
+        height: 206
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,71 +156,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 446f2d6f14814fd40800000000000000
-      internalID: 5617141306830812740
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buttonPressed
-      rect:
-        serializedVersion: 2
-        x: 800
-        y: 649
-        width: 501
-        height: 503
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d0cd8873b18670580800000000000000
-      internalID: -8860999275723039731
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pressed1
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 42
-        width: 502
-        height: 503
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b194d4fa72cb80480800000000000000
-      internalID: -8932682982258554597
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pressed2
-      rect:
-        serializedVersion: 2
-        x: 808
-        y: 45
-        width: 500
-        height: 504
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8b38fe9c354cc2bc0800000000000000
-      internalID: -3806451720885664840
+      spriteID: 47ab152d1e48e1270800000000000000
+      internalID: 8223156075056183924
       vertices: []
       indices: 
       edges: []

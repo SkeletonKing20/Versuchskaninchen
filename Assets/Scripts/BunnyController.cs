@@ -33,7 +33,7 @@ public class BunnyController : MonoBehaviour
     public Sprite pushDown_3;
     public Text UIText;
     public LayerMask boxMask;
-
+    public ButtonController button;
     public bool isHolding;
     bool isGameOver = false;
     bool onTrapdoor;
@@ -125,6 +125,10 @@ public class BunnyController : MonoBehaviour
         {
             onTrapdoor = true;
         }
+        if (collision.gameObject.CompareTag("Button"))
+        {
+            button.SetPressed(1);
+        }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -147,7 +151,7 @@ public class BunnyController : MonoBehaviour
         {
             faceDirection = transform.up * -1f;
         }
-        else if (spriteR.sprite == pushHorizontal_1 || spriteR.sprite == pushHorizontal_2 || spriteR.sprite == pushHorizontal_3 && spriteR.flipX == true)
+        else if ((spriteR.sprite == pushHorizontal_1 || spriteR.sprite == pushHorizontal_2 || spriteR.sprite == pushHorizontal_3) && spriteR.flipX == true)
         {
             faceDirection = transform.right * -1f;
         }
@@ -161,6 +165,10 @@ public class BunnyController : MonoBehaviour
         if (collision.gameObject.CompareTag("Trapdoor"))
         {
             onTrapdoor = false;
+        }
+        if (collision.gameObject.CompareTag("Button"))
+        {
+            button.SetPressed(1 * -1);
         }
     }
 

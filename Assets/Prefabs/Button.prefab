@@ -47,7 +47,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Button: {fileID: 5617141306830812740, guid: 2eed60e3d2d7e244ebe3c81145b2242f, type: 3}
   ButtonPressed: {fileID: -8860999275723039731, guid: 2eed60e3d2d7e244ebe3c81145b2242f, type: 3}
+  ButtonPress1: {fileID: -8932682982258554597, guid: 2eed60e3d2d7e244ebe3c81145b2242f, type: 3}
+  ButtonPress2: {fileID: -3806451720885664840, guid: 2eed60e3d2d7e244ebe3c81145b2242f, type: 3}
   door: {fileID: 0}
+  pressWeight: 0
 --- !u!1 &3142540016616481204
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,7 +158,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6415334133279088539}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.297, y: -0.203, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7716421068179415787}
