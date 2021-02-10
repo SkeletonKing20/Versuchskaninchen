@@ -106,12 +106,12 @@ TextureImporter:
       name: GunTurretHeadOpen
       rect:
         serializedVersion: 2
-        x: 514
-        y: 671
-        width: 195
-        height: 350
+        x: 1025
+        y: 674
+        width: 170
+        height: 396
       alignment: 9
-      pivot: {x: 0.53571874, y: 0.20147112}
+      pivot: {x: 0.5, y: 0.23015217}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -127,12 +127,12 @@ TextureImporter:
       name: GunTurretHeadClosed
       rect:
         serializedVersion: 2
-        x: 1015
-        y: 662
-        width: 186
-        height: 399
+        x: 528
+        y: 672
+        width: 171
+        height: 396
       alignment: 9
-      pivot: {x: 0.5, y: 0.27}
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
