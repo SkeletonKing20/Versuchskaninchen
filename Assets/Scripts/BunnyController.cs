@@ -75,17 +75,18 @@ public class BunnyController : MonoBehaviour
     private void Update()
     {
         UIText.text = killCount.ToString();
-        //faceDirection = (transform.right * Input.GetAxisRaw("Horizontal") + transform.up * Input.GetAxisRaw("Vertical")).normalized;
-        
         if (Input.GetKeyDown(KeyCode.K))
         {
             gameOver();
         }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Reset();
+        }
     }
     void FixedUpdate()
     {
-        if(isGameOver == false)
-        rb2d.velocity = Vector2.right * movementSpeed * Time.deltaTime * Input.GetAxisRaw("Horizontal") + Vector2.up * movementSpeed * Time.deltaTime * Input.GetAxisRaw("Vertical");
+        movePlayer();
     }
     public void gameOver()
     {
@@ -122,7 +123,7 @@ public class BunnyController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("LoadNextScene"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            Reset();
         }
         if (collision.gameObject.CompareTag("Trapdoor"))
         {
@@ -191,5 +192,18 @@ public class BunnyController : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position, transform.position + faceDirection * transform.localScale.x * rayDistance);
+    }
+
+    private void Reset()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    private void movePlayer()
+    {
+        if (isGameOver == false)
+        {
+            rb2d.velocity = Vector2.right * movementSpeed * Time.deltaTime * Input.GetAxisRaw("Horizontal") + Vector2.up * movementSpeed * Time.deltaTime * Input.GetAxisRaw("Vertical");
+        }
     }
 }
