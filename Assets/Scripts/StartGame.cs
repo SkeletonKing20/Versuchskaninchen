@@ -11,6 +11,8 @@ public class StartGame : MonoBehaviour
     bool credits;
     private void Start()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         initialPosition = transform.position;
         start = true;
         credits = false;
