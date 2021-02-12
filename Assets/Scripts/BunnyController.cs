@@ -42,7 +42,7 @@ public class BunnyController : MonoBehaviour
     private float movementSpeed = 250f;
     public float rayDistance;
 
-    Vector3 faceDirection;
+    public Vector3 faceDirection;
     Vector3 startPosition;
 
     IEnumerator deathAnim(float seconds, GameObject death, AudioClip clip)
@@ -76,18 +76,10 @@ public class BunnyController : MonoBehaviour
     {
         UIText.text = killCount.ToString();
         //faceDirection = (transform.right * Input.GetAxisRaw("Horizontal") + transform.up * Input.GetAxisRaw("Vertical")).normalized;
-        calcDirection();
+        
         if (Input.GetKeyDown(KeyCode.K))
         {
             gameOver();
-        }
-
-        hit = Physics2D.Raycast(transform.position, faceDirection, rayDistance, boxMask);
-        if (Input.GetButton("Jump") && hit.collider != null)
-        {
-            Debug.Log("HIT!");
-            hit.collider.gameObject.GetComponentInParent<FixedJoint2D>().enabled = true;
-            hit.collider.gameObject.GetComponentInParent<FixedJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
         }
     }
     void FixedUpdate()
@@ -101,6 +93,17 @@ public class BunnyController : MonoBehaviour
         isGameOver = true;
         StartCoroutine(deathAnim(1f, death, clip));
         killCount++;
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        calcDirection();
+        hit = Physics2D.Raycast(transform.position, faceDirection.normalized, rayDistance, boxMask);
+        if (Input.GetButton("Jump") && hit.collider != null)
+        {
+            hit.collider.gameObject.GetComponentInParent<FixedJoint2D>().enabled = true;
+            hit.collider.gameObject.GetComponentInParent<FixedJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -145,18 +148,22 @@ public class BunnyController : MonoBehaviour
     {
         if (spriteR.sprite == pushUp_1 || spriteR.sprite == pushUp_2 || spriteR.sprite == pushUp_3)
         {
+            Debug.Log("Up");
             faceDirection = transform.up;
         }
         else if (spriteR.sprite == pushDown_1 || spriteR.sprite == pushDown_2 || spriteR.sprite == pushDown_3)
         {
-            faceDirection = transform.up * -1f;
+            Debug.Log("Down");
+            faceDirection = new Vector3(0, -1, 0);
         }
         else if ((spriteR.sprite == pushHorizontal_1 || spriteR.sprite == pushHorizontal_2 || spriteR.sprite == pushHorizontal_3) && spriteR.flipX == true)
         {
-            faceDirection = transform.right * -1f;
+            Debug.Log("Left");
+            faceDirection = new Vector3(-1, 0, 0);
         }
-        else
+        else if((spriteR.sprite == pushHorizontal_1 || spriteR.sprite == pushHorizontal_2 || spriteR.sprite == pushHorizontal_3) && spriteR.flipX == false)
         {
+            Debug.Log("Right");
             faceDirection = transform.right;
         }
     }
@@ -178,5 +185,11 @@ public class BunnyController : MonoBehaviour
         isGameOver = true;
         StartCoroutine(deathAnim(1f, electrocution, clip));
         killCount++;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position, transform.position + faceDirection * transform.localScale.x * rayDistance);
     }
 }

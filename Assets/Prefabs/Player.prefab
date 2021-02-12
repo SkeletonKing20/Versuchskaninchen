@@ -44,7 +44,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01846913, y: -0.080817804}
+  m_Offset: {x: -0.018469132, y: -0.069223076}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.65, y: 0.37}
@@ -55,7 +55,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.11287069, y: 0.12660673}
+  m_Size: {x: 0.11287069, y: 0.14979619}
   m_EdgeRadius: 0
 --- !u!1 &6863685117079564050
 GameObject:
@@ -163,21 +163,23 @@ MonoBehaviour:
   blueUICard: {fileID: 0}
   yellowUICard: {fileID: 0}
   spriteBunny: {fileID: 6863685118433634671}
-  pushHorizontal_1: {fileID: -6570303600597065281, guid: 62a74801e216a5b4396026fdd5111789, type: 3}
-  pushHorizontal_2: {fileID: 7156870722967164171, guid: 62a74801e216a5b4396026fdd5111789, type: 3}
-  pushHorizontal_3: {fileID: 664265332215761522, guid: 62a74801e216a5b4396026fdd5111789, type: 3}
+  pushHorizontal_1: {fileID: -5378941650565537859, guid: 62a74801e216a5b4396026fdd5111789, type: 3}
+  pushHorizontal_2: {fileID: 8466848728427864954, guid: 00fecef331ec28e418f237419280c89f, type: 3}
+  pushHorizontal_3: {fileID: -7990602464474920449, guid: 00fecef331ec28e418f237419280c89f, type: 3}
   pushUp_1: {fileID: -609588394274764161, guid: 47a3e43a7acbe884697c055f1d4802ff, type: 3}
   pushUp_2: {fileID: 481848012158601019, guid: 47a3e43a7acbe884697c055f1d4802ff, type: 3}
   pushUp_3: {fileID: 671657929872699613, guid: 47a3e43a7acbe884697c055f1d4802ff, type: 3}
   pushDown_1: {fileID: -7104600532865124277, guid: 47a3e43a7acbe884697c055f1d4802ff, type: 3}
-  pushDown_2: {fileID: 3893087003373370439, guid: 00fecef331ec28e418f237419280c89f, type: 3}
-  pushDown_3: {fileID: -1401655880272582190, guid: 00fecef331ec28e418f237419280c89f, type: 3}
+  pushDown_2: {fileID: -1401655880272582190, guid: 00fecef331ec28e418f237419280c89f, type: 3}
+  pushDown_3: {fileID: 3893087003373370439, guid: 00fecef331ec28e418f237419280c89f, type: 3}
   UIText: {fileID: 0}
   boxMask:
     serializedVersion: 2
     m_Bits: 8192
+  button: {fileID: 0}
   isHolding: 0
   rayDistance: 1.1
+  faceDirection: {x: 0, y: 0, z: 0}
 --- !u!66 &7102319396956858730
 CompositeCollider2D:
   m_ObjectHideFlags: 0
@@ -328,7 +330,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.02384217, y: -0.003710907}
+  m_Offset: {x: -0.025024923, y: -0.0127430335}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.65, y: 0.37}
@@ -339,5 +341,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.10938351, y: 0.24951461}
+  m_Size: {x: 0.11963415, y: 0.23145036}
   m_EdgeRadius: 0
