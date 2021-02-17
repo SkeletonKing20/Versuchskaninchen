@@ -69,8 +69,6 @@ GameObject:
   - component: {fileID: 6863685117079564048}
   - component: {fileID: 1976014249721851049}
   - component: {fileID: 5148816058736224633}
-  - component: {fileID: 7102319396956858730}
-  - component: {fileID: 8782848802070452140}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -180,40 +178,6 @@ MonoBehaviour:
   isHolding: 0
   rayDistance: 1.1
   faceDirection: {x: 0, y: 0, z: 0}
---- !u!66 &7102319396956858730
-CompositeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6863685117079564050}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
-  m_EdgeRadius: 0
-  m_ColliderPaths: []
-  m_CompositePaths:
-    m_Paths: []
-  m_VertexDistance: 0.0005
-  m_OffsetDistance: 0.00005
---- !u!114 &8782848802070452140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6863685117079564050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46479f34d1bafd44b83fa120e5ee1510, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6863685118433634671
 GameObject:
   m_ObjectHideFlags: 0

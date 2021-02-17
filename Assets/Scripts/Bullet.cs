@@ -7,6 +7,8 @@ public class Bullet : MonoBehaviour
     Rigidbody2D rb2d;
     CapsuleCollider2D capC2d;
     float movementSpeed = 1000f;
+    public WallButton button;
+    public Sprite pressed;
     private void Awake()
     {
         rb2d = GetComponentInChildren<Rigidbody2D>();
@@ -19,9 +21,17 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision != null)
+        if (collision != null && collision.gameObject.tag != "WallButton")
         {
             Destroy(gameObject);
+        }    
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision != null && collision.gameObject.tag == "WallButton")
+        {
+            WallButton.setPressed();
         }
     }
 }

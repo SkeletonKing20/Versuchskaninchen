@@ -10,38 +10,52 @@ public class PlatformController : MonoBehaviour
     public Vector3 targetPosition;
     Rigidbody2D rb2D;
     public int trapDoorNumber;
+    public BunnyController bunny;
+    public WallButton button;
     private void Start()
     {
         initialPosition = transform.position;
         rb2D = GetComponent<Rigidbody2D>();
     }
-    void FixedUpdate()
-    {
-        if (trapDoorNumber == 1)
-        {
-            if (transform.position.x > targetPosition.x)
-            {
-                rb2D.velocity = transform.right * speed * Time.deltaTime;
-            }
-            else
-            {
-                Reset();
-            }
-        }
+    //void FixedUpdate()
+    //{
+    //    if (trapDoorNumber == 1)
+    //    {
+    //        if (transform.position.x > targetPosition.x)
+    //        {
+    //            rb2D.velocity = transform.right * speed * Time.deltaTime;
+    //        }
+    //        else
+    //        {
+    //            Reset();
+    //        }
+    //    }
 
-        if (trapDoorNumber == 2)
+    //    if (trapDoorNumber == 2)
+    //    {
+    //        if (transform.position.y > targetPosition.y)
+    //        {
+    //            rb2D.velocity = transform.right * speed * Time.deltaTime;
+    //        }
+    //        else
+    //        {
+    //            Reset();
+    //        }
+    //    }
+    //}
+
+    private void FixedUpdate()
+    {
+        if (button.isPressed)
         {
-            if (transform.position.y > targetPosition.y)
-            {
-                rb2D.velocity = transform.right * speed * Time.deltaTime;
-            }
-            else
-            {
-                Reset();
-            }
+            transform.position = initialPosition;
+        }
+        else
+        {
+            bunny.setOnTrapdoor();
+            transform.position = targetPosition;
         }
     }
-
     private void Reset()
     {
         transform.position = initialPosition;

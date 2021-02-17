@@ -5,7 +5,7 @@ using UnityEngine;
 public class Turret : MonoBehaviour
 {
     public Bullet bullet;
-    int coolDown;
+    float coolDown;
     public TurretHead turretHead;
     int paramIDShot;
     Animator animator;
@@ -18,7 +18,7 @@ public class Turret : MonoBehaviour
     {
         if(Time.time > coolDown)
         {
-            coolDown += 1;
+            coolDown += 0.5f;
             animator.SetTrigger(paramIDShot);
             Instantiate(bullet, turretHead.transform.position, turretHead.getRotation());
         }

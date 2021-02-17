@@ -86,6 +86,7 @@ public class BunnyController : MonoBehaviour
     }
     void FixedUpdate()
     {
+        rb2d.WakeUp();
         movePlayer();
     }
     public void gameOver()
@@ -205,5 +206,10 @@ public class BunnyController : MonoBehaviour
         {
             rb2d.velocity = Vector2.right * movementSpeed * Time.deltaTime * Input.GetAxisRaw("Horizontal") + Vector2.up * movementSpeed * Time.deltaTime * Input.GetAxisRaw("Vertical");
         }
+    }
+
+    public void setOnTrapdoor()
+    {
+        onTrapdoor = false;
     }
 }
