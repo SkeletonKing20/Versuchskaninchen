@@ -124,7 +124,7 @@ public class BunnyController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("LoadNextScene"))
         {
-            Reset();
+            SceneManager.LoadScene(2);
         }
         if (collision.gameObject.CompareTag("Trapdoor"))
         {
