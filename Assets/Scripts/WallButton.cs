@@ -10,12 +10,15 @@ public class WallButton : MonoBehaviour
     public bool isPressed;
     float coolDown;
     public static GameObject button1;
+    public AudioClip bonk;
+    AudioSource audio;
     private void Start()
     {
         spriteR = GetComponent<SpriteRenderer>();
         initialButton = spriteR.sprite;
         isPressed = false;
         button1 = GameObject.Find("WallButton");
+        audio = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -50,5 +53,10 @@ public class WallButton : MonoBehaviour
         {
             button1.gameObject.GetComponent<WallButton>().isPressed = true;
         }
+    }
+
+    public void playSound()
+    {
+        audio.PlayOneShot(bonk);
     }
 }

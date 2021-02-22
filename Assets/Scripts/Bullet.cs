@@ -9,10 +9,16 @@ public class Bullet : MonoBehaviour
     float movementSpeed = 1000f;
     public WallButton button;
     public Sprite pressed;
+    public WallButton wallB;
     private void Awake()
     {
         rb2d = GetComponentInChildren<Rigidbody2D>();
         capC2d = GetComponentInChildren<CapsuleCollider2D>();
+    }
+
+    private void Start()
+    {
+        wallB = FindObjectOfType<WallButton>();
     }
     void FixedUpdate()
     {
@@ -32,6 +38,7 @@ public class Bullet : MonoBehaviour
         if (collision != null && collision.gameObject.tag == "WallButton")
         {
             WallButton.setPressed();
+            wallB.playSound();
         }
     }
 }
